@@ -3,8 +3,13 @@ from enum import Enum
 ##
 ##
 class DNDClasses(Enum):
-    ROGUE = "rogue"
-    BARBARIAN = "barbarian"
-    BARD = "bard"
-    WIZARD = "wizard"
-    CLERIC = "cleric"
+    ROGUE = "Rogue"
+    FIGHTER = "Fighter"
+    BARBARIAN = "Barbarian"
+    BARD = "Bard"
+    WIZARD = "Wizard"
+    CLERIC = "Cleric"
+    RANGER = "Ranger"
+    PALADIN = "Paladin"
+    WARLOCK = "Warlock"
+    WARLORD = "Warlord"

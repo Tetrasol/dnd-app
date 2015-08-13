@@ -8,4 +8,7 @@ class DNDRaces(Enum):
   HUMAN = "Human"
   ELF = "Elf"
   TIEFLING = "Tiefling"
-  ORC = "Orc"
+  DRAGONBORN = "Dragonborn"
+  ELADRIN = "Eladrin"
+  HALF-ELF = "Half-Elf"
+  HALFLING = "Halfling"
