@@ -1,18 +1,28 @@
 #!/usr/bin/python
 from encounter import Encounter
+
 ## A Quest is defined as collection of Encounters
 ##
 class Quest(object):
-  description = None
-  encounters = None # uses the encounters object to define
-  loot = None
 
-  success_check = None
-  failure_check = None
-  
+  # textual quest plot, setting, and objective
+  description = None
+
+  # list of quest encounters
+  encounters = []
+
+  success_condition = None
+  failure_condition = None
+
+  # inventory object describing rewards after encounter completion
+  loot_drop = None # items, xp, money
+
   def __init__(self, title):
     self.title = title
 
-  def createQuest(self):
+  def addEncounterToQuest(self, title):
       # creates many encounters
-    pass
+      encounter = Encounter(title)
+
+  def removeEncounterFromQuest(self, title):
+      pass
