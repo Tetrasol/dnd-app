@@ -1,6 +1,9 @@
 #!/usr/bin/python
-from dnd_classes import DNDClasses
-from dnd_races import DNDRaces
+import DNDClasses
+import DNDRaces
+
+DND_CLASSES = DNDClasses()
+DND_RACES = DNDRaces()
 
 class Character(object):
   max_HP = None
@@ -18,7 +21,7 @@ class Character(object):
     'temporaryModifier': 0
   }
 
-  character_ability_scores = {
+  ability_scores = {
     'STR': 0,
     'DEX': 0,
     'CON': 0,
@@ -72,33 +75,40 @@ class Character(object):
 
   ##
   def calculateAbilityScores(self):
-    if self.race == DNDRaces.ELF:
-        character_ability_scores["DEX"] += 2
-        character_ability_scores["WIS"] += 2
-    elif self.race == DNDRaces.ELADRIN:
-        character_ability_scores["DEX"] += 2
-        character_ability_scores["INT"] += 2
-    elif self.race == DNDRaces.DWARF:
-        character_ability_scores["CON"] += 2
-        character_ability_scores["WIS"] += 2
-    elif self.race == DNDRaces.HUMAN:
-    elif self.race == DNDRaces.TIEFLING:
-        character_ability_scores["INT"] += 2
-        character_ability_scores["CHA"] += 2
-    elif self.race == DNDRaces.DRAGONBORN:
-        character_ability_scores["STR"] += 2
-        character_ability_scores["CHA"] += 2
-    elif self.race == DNDRaces.HALFLING:
-        character_ability_scores["DEX"] += 2
-        character_ability_scores["CHA"] += 2
-    elif self.race == DNDRaces.HALF-ELF:
-        character_ability_scores["CON"] += 2
-        character_ability_scores["CHA"] += 2
-
+    if self.race == DND_RACES.ELF:
+        ability_scores["DEX"] += 2
+        ability_scores["WIS"] += 2
+    elif self.race == DND_RACES.ELADRIN:
+        ability_scores["DEX"] += 2
+        ability_scores["INT"] += 2
+    elif self.race == DND_RACES.DWARF:
+        ability_scores["CON"] += 2
+        ability_scores["WIS"] += 2
+    elif self.race == DND_RACES.HUMAN:
+    elif self.race == DND_RACES.TIEFLING:
+        ability_scores["INT"] += 2
+        ability_scores["CHA"] += 2
+    elif self.race == DND_RACES.DRAGONBORN:
+        ability_scores["STR"] += 2
+        ability_scores["CHA"] += 2
+    elif self.race == DND_RACES.HALFLING:
+        ability_scores["DEX"] += 2
+        ability_scores["CHA"] += 2
+    elif self.race == DND_RACES.HALF_ELF:
+        ability_scores["CON"] += 2
+        ability_scores["CHA"] += 2
   ##
-  def calculateMaxHP(self):
-      if self.character_class == DNDClasses.ROUGE:
+    def calculateMaxHP(self):
+      if self.character_class == DND_CLASSES.ROUGE:
           max_HP += 3
+      if self.character_class == DND_CLASSES.FIGHTER:
+      if self.character_class == DND_CLASSES.PALADIN:
+      if self.character_class == DND_CLASSES.BARD:
+      if self.character_class == DND_CLASSES.WIZARD:
+      if self.character_class == DND_CLASSES.CLERIC:
+      if self.character_class == DND_CLASSES.WARLORD:
+      if self.character_class == DND_CLASSES.WARLOCK:
+      if self.character_class == DND_CLASSES.RANGER:
 
   ##
   ##

@@ -1,8 +1,7 @@
 #!/usr/bin/python
-from enum import Enum
+
 ##
-##
-class DNDClasses(Enum):
+class DNDClasses(object):
     ROGUE = "Rogue"
     FIGHTER = "Fighter"
     BARBARIAN = "Barbarian"
