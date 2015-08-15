@@ -6,16 +6,16 @@ from encounter import Encounter
 class Quest(object):
 
   # textual quest plot, setting, and objective
-  description = None
+  __description = None
 
   # list of quest encounters
-  encounters = []
+  __encounters = []
 
-  success_condition = None
-  failure_condition = None
+  __success_condition = None
+  __failure_condition = None
 
   # inventory object describing rewards after encounter completion
-  loot_drop = None # items, xp, money
+  __loot_drop = None # items, xp, money
 
   def __init__(self, title):
     self.title = title
@@ -23,6 +23,7 @@ class Quest(object):
   def addEncounterToQuest(self, title):
       # creates many encounters
       encounter = Encounter(title)
+      __encounters.insert(encounter)
 
   def removeEncounterFromQuest(self, title):
       pass

@@ -40,7 +40,7 @@ class Character(object):
 
   ##
   def calculateBaseStats(self):
-      if self.race == DNDRaces.ELF: // FIXME need to change this to an ENUM
+      if self.race == DNDRaces.ELF:
         character_base_stats["STR"] += 2
 
   ##

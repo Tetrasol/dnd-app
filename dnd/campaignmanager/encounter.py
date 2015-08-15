@@ -22,3 +22,5 @@ class Encounter(object):
 
   def __init__(self, title):
     self.title = title
+
+  def addMonsterToEncounter(self):
