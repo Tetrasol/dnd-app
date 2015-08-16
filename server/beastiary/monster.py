@@ -11,12 +11,17 @@ class Monster(object):
         self.current_HP = max_HP
 
     def addMonsterIDToIDList(self):
-        self.monster_ID = self.name.upper()
+        unique = True
 
         if len(MONSTER_LIST.IDs) == 0: # if the list is empty
             # add monster id to list
+            MONSTER_LIST.IDs.insert(self.name.upper() + str(self.max_HP))
         elif len(MONSTER_LIST.IDs) > 0: # list not empty
             # make sure the id is unique
             for ID in MONSTER_LIST.IDs:
-        else:
-            pass
+                if ID == self.name.upper():
+                    unique = False
+
+            if unique:
+                # add monster id to list
+                MONSTER_LIST.IDs.insert(self.name.upper() + str(self.max_HP))

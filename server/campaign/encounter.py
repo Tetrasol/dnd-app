@@ -8,7 +8,7 @@ class Encounter(object):
     # textual encounter plot, setting, and objective
     __description = None
 
-    __monster = None # monster list object
+    __monster_list = None # monster list object
 
     # event checks are a variety of triggers
     # they depend on various conditions defined by the dungeon master
