@@ -33,7 +33,14 @@ class Character(object):
       'CHA': 0
     }
 
-    character_skills = {
+    defenses = {
+      'AC':   0,
+      'FORT': 0,
+      'REF':  0,
+      'WILL': 0
+    }
+
+    skills = {
       'Acrobatics': 0,
       'Arcana': 0,
       'Athletics': 0,
@@ -95,6 +102,12 @@ class Character(object):
       elif self.race == DND_RACES.DRAGONBORN:
           ability_scores["STR"] += 2
           ability_scores["CHA"] += 2
+          skills["History"] +=2
+          skills["Intimidate"] +=2
+          ##TO-DO: MUST ADD SIZE TO RACES
+          ##TO-DO: MUST ADD lANGUAGES
+          ##TO-DO: MUST ADD SPEED TO RACES
+
       elif self.race == DND_RACES.HALFLING:
           ability_scores["DEX"] += 2
           ability_scores["CHA"] += 2
