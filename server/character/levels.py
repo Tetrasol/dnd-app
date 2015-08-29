@@ -1,4 +1,4 @@
-
+#!/usr/bin/python
 ##Levels provides information on current_XP correlation and character level
 class Levels(object):
     LEVELS = [
